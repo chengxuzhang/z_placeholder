@@ -1,0 +1,2 @@
+# z_placeholder
+javascript版placeholder解决一些浏览器不支持placeholder属性的问题
