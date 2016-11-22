@@ -73,7 +73,7 @@ $(function(){
    密码：<input type="text" name="password" class="check-number" data-num=20/><br/>
    </div>
    <div class="form-group">
-   备注：<textarea rows="3" cols="17" class="check-number" data-num=100></textarea>
+   备注：<textarea rows="3" cols="17" class="check-number" data-tip="描述下你自己"></textarea>
    </div>
    <input type="button" value="提交" class="submit"/>
   </form>
@@ -87,11 +87,7 @@ $(function(){
 
 
     $(function(){
-$(".check-number").placeholder();
-
-      $("#input").change(function(){
-        alert(111);
-      });
+      $(".check-number").placeholder();
     })
   </script>
 
