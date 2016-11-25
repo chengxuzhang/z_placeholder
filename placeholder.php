@@ -111,19 +111,19 @@ $(function(){
   <div class="form-group">
   <label for="" class="col-sm-2 control-label">帐号：</label>
   <div class="col-sm-10">
-   <input type="text" name="username" class="form-control check-number" data-num=20/><br/>
+   <input type="text" name="username" class="form-control check-number" data-num=20 /><br/>
   </div>
    </div>
    <div class="form-group">
    <label for="" class="col-sm-2 control-label">密码：</label>
    <div class="col-sm-10">
-   <input type="password" name="password" class="form-control check-number" data-num=20/><br/>
+   <input type="password" name="password" class="form-control check-number" data-num=20 /><br/>
    </div>
    </div>
    <div class="form-group">
    <label for="" class="col-sm-2 control-label">备注：</label>
    <div class="col-sm-10">
-   <textarea rows="3" cols="17" class="form-control check-number" data-tip="描述下你自己"></textarea>
+   <textarea rows="3" cols="17" class="form-control check-number" data-num=100 data-tip="描述下你自己"></textarea>
    </div>
    </div>
    <div class="form-group">
