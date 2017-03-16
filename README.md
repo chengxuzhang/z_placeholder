@@ -7,6 +7,8 @@ javascript版placeholder解决一些浏览器不支持placeholder属性的问题
 
 ## 说明
 
+下面介绍的是extend.php扩展中的内容，你可以看纯净版本的demo.php，里面只有placeholder的示例。
+
 引入文件placeholder.js
 
 form表单形式(设置data-num会自动有字数限制,如果不设置data-num属性要添加data-tip属性)
@@ -58,7 +60,12 @@ form表单形式(设置data-num会自动有字数限制,如果不设置data-num�
 
 ```
 $(function(){
-    $(".check-number").placeholder();
+    $(".check-number").placeholder({
+      llen:45, // 右下角文字距离左侧的距离
+      xlen:5, // placeholder文字距离左侧的距离
+      fontSize:12, // placeholder文字大小
+      lineHeight:24, // 设置line-height，可使文字居中
+    });
 })
 ```
 

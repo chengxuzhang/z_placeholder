@@ -117,7 +117,7 @@ $(function(){
    <div class="form-group">
    <label for="" class="col-sm-2 control-label">密码：</label>
    <div class="col-sm-10">
-   <input type="password" name="password" class="form-control check-number" data-num=20 /><br/>
+   <input type="text" name="password" class="form-control check-number" data-num=20 /><br/>
    </div>
    </div>
    <div class="form-group">
@@ -168,7 +168,12 @@ $(function(){
 <script src="jquery.form.js" type="text/javascript"></script>
   <script>
     $(function(){
-      $(".check-number").placeholder();
+      $(".check-number").placeholder({
+        llen:30,
+        xlen:13,
+        fontSize:14,
+        lineHeight:34,
+      });
 
       var _URL = window.URL || window.webkitURL;
         $(".uploadimg").change(function (e) {

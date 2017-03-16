@@ -3,9 +3,37 @@
 
 $(function(){
 	$.fn.extend({
-        placeholder:function(params){
+        placeholder:function(config){
+            /**
+             * 当没有传任何参数时默认为空对象
+             * @type {Object}
+             */
+            if(!config) config = {};
+
+            /**
+             * 字体大小
+             * @type {[type]}
+             */
+            var fontSize = config.fontSize?config.fontSize:16;
+
+            /**
+             * line-height 可手动调节
+             * @type {[type]}
+             */
+            var lineHeight = config.lineHeight?config.lineHeight:34;
+
+            /**
+             * 右下角文字距左侧的距离
+             * @type {[type]}
+             */
+            var llen = config.llen?config.llen:30;
+
+            /**
+             * placeholder文字距离左侧的距离
+             * @type {[type]}
+             */
+            var xlen = config.xlen?config.xlen:13;
             var changeAttr = false;
-            // var countWord = params.countWord || false;
             var _this = this;
             // ie9存在bug,当内容减少时不会触发
             _this.bind('input propertychange', function(){
@@ -39,7 +67,7 @@ $(function(){
                 vobj.parent().css({"position":"relative"});
                 vobj.css({"position":"relative"});
                 var vl = vobj.position().left;
-                $(div).css({"position":"absolute","left":(vl+13)+"px","top":"0px","width":vw+"px","height":vh+"px","line-height":"34px","color":"#999999","pointer-events":"none","z-index":"1"}).html(tip);
+                $(div).css({"position":"absolute","left":(vl+xlen)+"px","top":"0px","width":vw+"px","height":vh+"px","font-size":fontSize+"px","line-height":lineHeight+"px","color":"#999999","pointer-events":"none","z-index":"1"}).html(tip);
                 if(vtxt == '' || typeof(vtxt) == undefined){
                     vobj.attr("clr",0);// 为0时为空
                     $(div).css({"display":"block"});
@@ -51,7 +79,7 @@ $(function(){
                 if(vobj.attr("data-num") != undefined){
                     var cDiv = document.createElement("div");
                     cDiv.className = 'cDiv';
-                    $(cDiv).css({"position":"absolute","left":(vl+vw-30)+"px","top":(vh-16)+"px","width":"auto","height":"auto","color":"#999999","pointer-events":"none","font-size":"12px","z-index":"2"}).html('(剩'+(parseInt(vobj.attr("data-num"))-vtxt.length)+'字)');
+                    $(cDiv).css({"position":"absolute","left":(vl+vw-llen)+"px","top":(vh-16)+"px","width":"auto","height":"auto","color":"#999999","pointer-events":"none","font-size":"12px","z-index":"2"}).html('(剩'+(parseInt(vobj.attr("data-num"))-vtxt.length)+'字)');
                     vobj.after(cDiv);
                 }
             });
