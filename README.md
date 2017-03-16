@@ -9,7 +9,9 @@ javascript版placeholder解决一些浏览器不支持placeholder属性的问题
 
 下面介绍的是extend.php扩展中的内容，你可以看纯净版本的demo.php，里面只有placeholder的示例。
 
-引入文件placeholder.js
+引入文件resize.min.js  placeholder.min.js
+
+resize.min.js必须引入，因为placeholder中使用到了resize当窗口改变大小的时候做必要的调整
 
 form表单形式(设置data-num会自动有字数限制,如果不设置data-num属性要添加data-tip属性)
 ```

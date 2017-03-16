@@ -42,7 +42,8 @@ line-height: 38px;
                  .viewPic img{vertical-align:top !important;}
                  </style>
   <script type="text/javascript" src="jquery.min.js"></script>
-  <script type="text/javascript" src="placeholder.js"></script>
+  <script type="text/javascript" src="resize.min.js"></script>
+  <script type="text/javascript" src="placeholder.min.js"></script>
   <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="layer/layer.js"></script>
   <link rel="stylesheet" href="layer/skin/layer.css">
@@ -117,7 +118,7 @@ $(function(){
    <div class="form-group">
    <label for="" class="col-sm-2 control-label">密码：</label>
    <div class="col-sm-10">
-   <input type="text" name="password" class="form-control check-number" data-num=20 /><br/>
+   <input type="password" name="password" class="form-control check-number" data-num=20 /><br/>
    </div>
    </div>
    <div class="form-group">

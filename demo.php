@@ -23,7 +23,8 @@ $data = $_GET;
 </form>
 
 <script src="jquery.min.js" type="text/javascript"></script>
-<script src="placeholder.js" type="text/javascript"></script>
+<script src="resize.min.js" type="text/javascript"></script>
+<script src="placeholder.min.js" type="text/javascript"></script>
 <script>
 	$(function(){
 	    $(".check-num").placeholder({
